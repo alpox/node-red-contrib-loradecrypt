@@ -19,7 +19,8 @@ module.exports = function(RED) {
             var payload = msg.payload;
 
             if(typeof payload === "string") {
-                node.send(decryptPayload(payload));
+                msg.payload = decryptPayload(payload);
+                node.send(msg);
                 return;
             }
 
