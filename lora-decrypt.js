@@ -35,6 +35,11 @@ module.exports = function(RED) {
                 return last[part];
             }, payload);
 
+            if(!rawPayload) {
+                node.error(`Could not find the path '${node.path}' in the payload!`);
+                return;
+            }
+
             var decryptedPayload = decryptPayload(rawPayload);
             lastPart[pathParts[pathParts.length - 1]] = decryptedPayload;
 
