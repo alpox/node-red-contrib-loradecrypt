@@ -1,0 +1,27 @@
+{
+  "name": "node-red-contrib-loradecrypt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lora-decrypt.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alpox/node-red-contrib-loradecrypt.git"
+  },
+  "author": "Elias Bernhaut",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alpox/node-red-contrib-loradecrypt/issues"
+  },
+  "homepage": "https://github.com/alpox/node-red-contrib-loradecrypt#readme",
+  "dependencies": {
+    "lora-packet": "^0.6.0"
+  },
+  "node-red"     : {
+        "nodes": {
+            "lora-decrypt": "lora-decrypt.js"
+        }
+    }
+}

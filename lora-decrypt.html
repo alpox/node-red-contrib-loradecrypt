@@ -1,0 +1,36 @@
+<script type="text/javascript">
+    RED.nodes.registerType('lora-decrypt',{
+        category: 'function',
+        color:"#DEBD5C",
+        defaults: {
+            name: {value:""},
+            path: {value:"data.payload"}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "arrow-in.png",
+        label: function() {
+            return this.name||"lora-decrypt";
+        },
+        labelStyle: function() {
+            return this.name?"node_label_italic":"";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="lora-decrypt">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-path"><i class="fa fa-navicon"></i> JSON Path</label>
+        <input type="text" id="node-input-path" placeholder="JSON Path">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="lora-decrypt">
+    <p>Replaces the raw payload in the input javascript-object
+        with the decrypted lora data.<p>
+</script>
